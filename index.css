@@ -1,0 +1,100 @@
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* 顶部导航栏样式 */
+.top-nav {
+    background-color: #333;
+    overflow: hidden;
+    position: fixed; /* 固定在顶部 */
+    top: 0; /* 距离顶部 0 像素 */
+    left: 0; /* 距离左侧 0 像素 */
+    right: 0; /* 距离右侧 0 像素 */
+    z-index: 2; /* 增加 z-index，确保导航栏在上方 */
+}
+
+.top-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.top-nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.top-nav li a:hover {
+    background-color: #111;
+}
+
+/* 左侧竖向导航栏样式 */
+.side-nav {
+    width: 200px;
+    background-color: #f1f1f1;
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+    left: 0; /* 固定在左侧 */
+    top: 50px; /* 从顶部向下偏移 50 像素，避免挡住导航栏 */
+}
+
+.side-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.side-nav li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.side-nav li a:hover {
+    background-color: #ddd;
+}
+
+/* 主要内容区域样式 */
+.main-content {
+    margin-left: 220px;
+    margin-right: 220px; /* 为右侧信息模块留出空间 */
+    margin-top: 50px; /* 避免被顶部导航栏覆盖 */
+    padding: 20px;
+}
+
+/* 右侧信息模块样式 */
+.right-info {
+    position: fixed;
+    right: 0;
+    top: 50px; /* 从顶部向下偏移 50 像素，避免挡住导航栏 */
+    width: 200px;
+    height: calc(100% - 50px); /* 调整高度，留出顶部导航栏的空间 */
+    background-color: #e1e1e1;
+    padding: 20px;
+    overflow: auto; /* 内容过多时可以滚动 */
+    
+}
+.right-info li a{
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+.right-info ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.right-info li a:hover {
+    background-color: #ddd;
+}
